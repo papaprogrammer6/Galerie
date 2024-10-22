@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Modern Gallery</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -13,9 +13,14 @@
             margin: 0;
             font-family: 'poppins';
             padding: 0;
+            overflow-x:hidden;
             transition: all 0.1s ease-in-out;
-        }
 
+
+        }
+        button{
+           font-size: 20px;
+        }
         body {
           
             min-height: 100vh;
@@ -106,7 +111,7 @@
             background: #f0f0f0;
             border-radius: 8px;
             cursor: pointer;
-            margin-right: 1rem;
+            
         }
 
        
@@ -313,8 +318,11 @@
             }
         }
         @media  (max-width: 500px) {
-            #uploadButton,label{
-                transform: scale(.7);
+            #uploadButton,label,.actions-section button{
+                transform: scale(.8);
+            }
+            .upload-section{
+                padding: 0 40px;
             }
         }
         .delete-btn {
@@ -549,7 +557,7 @@ button.disabled {
        <div class="fi">
          <label class="custom-file-upload">
              <input type="file" id="fileInput" multiple accept="image/*,video/*">
-             Choose Files
+             <ion-icon name="image-outline"></ion-icon>
          </label>
          <button id="uploadButton" onclick="handleUpload()">Upload</button>
        </div>
